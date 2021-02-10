@@ -1,0 +1,1054 @@
+<!doctype html>
+<html class="" lang="ar" dir="rtl">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mask | DW</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="images/apple-touch-icon.png" type="images/x-icon" rel="shortcut icon">
+    <!-- All css files are included here. -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;500&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- customizer style css -->
+    <link href="#" data-style="styles" rel="stylesheet">
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <style>
+        h1,
+        input,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        button,
+        p,
+        div,
+        ul,
+        span,
+        div.ttext,
+        a {
+            font-family: "Almarai", sans-serif !important;
+            letter-spacing: 0 !important;
+        }
+        
+        .shippingtop {
+            margin-bottom: 0;
+        }
+        
+        .logo.text-center {
+            padding: 20px 0 !important;
+        }
+        
+        .about-img img {
+            width: 350px;
+            float: left;
+        }
+        
+        .about-desc p {
+            text-align: justify;
+        }
+        
+        .cPanelContainer {
+            margin: auto;
+            padding: 0;
+        }
+        
+        .cPanelContent {
+            margin: auto;
+            padding: 0;
+            background: #ffffff;
+            text-align: center;
+            display: flex;
+        }
+        
+        .cPanelSection {
+            position: relative;
+            flex: 1;
+            transition: 0.3s;
+            -moz-transition: 0.3s;
+            -o-transition: 0.3s;
+            -webkit-transition: 0.3s;
+            padding: 25px;
+            border-left: 1px solid #517803;
+            border-right: 1px solid #517803;
+        }
+        
+        .cPanelSection:hover {
+            background: #f1f1f1;
+            flex: 2;
+            border-left: 1px solid #f0f0f0;
+            border-right: 1px solid #f0f0f0;
+        }
+        
+        .cPanelContent>div:first-child {
+            border-right: none;
+        }
+        
+        .cPanelContent>div:last-child {
+            border-left: none;
+        }
+        
+        .cPanelContent>div:last-child:after {
+            display: none;
+        }
+        
+        .cPanelContent>div:after {
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translate(50%, -50%);
+            z-index: 1;
+            opacity: 1;
+            padding: 5px 13px;
+            border-radius: 50%;
+            background: #517803;
+            transition: 0.3s;
+            -moz-transition: 0.3s;
+            -o-transition: 0.3s;
+            -webkit-transition: 0.3s;
+            content: "\f060";
+            font-size: 25px;
+            font-family: FontAwesome;
+            color: #f0f0f0;
+        }
+        
+        .cPanelContent h5 {
+            color: #4a4a4a;
+            font-weight: 400;
+        }
+        
+        .cPanelContent p {
+            font-size: 14px;
+            color: #4a4a4a;
+            padding: 0 10%;
+        }
+        
+        .cPanelArrowPulse {
+            position: absolute;
+            width: 0%;
+            padding-bottom: 0%;
+            border-radius: 50%;
+            top: 50%;
+            right: 100%;
+            transform: translate(50%, -50%);
+            background: #f0f0f0;
+            opacity: 0;
+            z-index: 2;
+            animation-name: cPanelArrowPulseAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+        
+        @keyframes cPanelArrowPulseAnimation {
+            0% {
+                opacity: 1;
+                width: 0%;
+                padding-bottom: 0%;
+            }
+            50% {
+                opacity: 0;
+                width: 20%;
+                padding-bottom: 20%;
+            }
+            100% {
+                opacity: 0;
+                width: 0%;
+                padding-bottom: 0%;
+            }
+        }
+        
+        .reviews {
+            width: 100%;
+            -moz-column-count: 4;
+            -webkit-column-count: 4;
+            column-count: 4;
+            -moz-column-gap: 15px;
+            -webkit-column-gap: 15px;
+            column-gap: 15px;
+        }
+        
+        .review {
+            text-align: right;
+            position: relative;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            background: #f4f4f4;
+            border-radius: 10px;
+            vertical-align: top;
+            display: inline-block;
+        }
+        
+        .review-rating-holder {
+            font-size: 16px;
+            color: #000;
+        }
+        
+        .reviews .review-rating-holder {
+            color: #777;
+            text-align: right;
+            font-size: 12px;
+        }
+        
+        .review-rating {
+            margin: 12px 0 18px;
+            font-size: 17px;
+            width: 116px;
+            height: 20px;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .reviews .review-rating {
+            width: 75px;
+            height: 13px;
+            margin-top: 13px;
+        }
+        
+        .review-rating .rating-bar {
+            width: 100%;
+            height: 20px;
+            background: #fce401;
+        }
+        
+        .reviews .review-rating .rating-bar {
+            height: 13px;
+        }
+        
+        .review-rating .rating-stars {
+            width: 116px;
+            height: 20px;
+            background: #fce401;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            background: url(https://woopcase.ma/img/stars.svg) center center no-repeat rgba(252, 228, 1, .2);
+            background-size: cover;
+            z-index: 2;
+        }
+        
+        .reviews .review-rating .rating-stars {
+            background-image: url(https://woopcase.ma/img/stars-dark.svg);
+            width: 75px;
+            height: 13px;
+        }
+        
+        .review-text {
+            color: #000;
+            line-height: 1.3;
+            font-size: 12px;
+        }
+        
+        .review-text span {
+            font-size: 14px;
+            font-weight: 600;
+            color: #9d9d9d;
+            margin: 0 3px;
+            display: inline-block;
+            line-height: 0;
+            vertical-align: middle;
+        }
+        
+        .review-text span:first-child {
+            margin-right: 0;
+        }
+        
+        .review-text span:last-child {
+            margin-left: 0;
+        }
+        
+        .review-author {
+            margin-top: 11px;
+            font-size: 12px;
+            color: #777;
+        }
+        
+        .review .author-icon {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            font-size: 12px;
+            background: #dedede;
+            border-radius: 30px;
+            color: #818181;
+            text-align: center;
+            line-height: 25px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 7px;
+            margin-top: -2px;
+        }
+        
+        .review .author-icon:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: url(https://woopcase.ma/img/tick-white.svg) center center no-repeat #02c658;
+            background-size: 4px 3px;
+            width: 8px;
+            height: 8px;
+            border-radius: 10px;
+        }
+        
+        .review .review-data {
+            padding: 10px;
+        }
+        
+        @media screen and (max-width:900px) {
+            .review-rating {
+                margin-right: 0;
+            }
+        }
+        
+        @media screen and (max-width:850px) {
+            .reviews {
+                -moz-column-count: 3;
+                -webkit-column-count: 3;
+                column-count: 3;
+            }
+        }
+        
+        @media screen and (max-width:560px) {
+            .reviews {
+                -moz-column-count: 1;
+                -webkit-column-count: 1;
+                column-count: 1;
+            }
+        }
+        
+        @media screen and (max-width:450px) {
+            .review {
+                padding: 5px;
+            }
+        }
+        
+        @media screen and (max-width:300px) {
+            .review {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        
+        img.review-img {
+            border-radius: 10px;
+        }
+        
+        .review {
+            min-height: 425px;
+            background: #f1f1f1;
+        }
+        
+        form#order-now {
+            background: #f1f1f1;
+            padding: 50px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body class="pattern-fixed pattern">
+    <div class="boxed-layout fixed">
+        <div class="wrapper white-bg">
+            <!--header section start-->
+            <!--header section start-->
+            <div class="header">
+                <div class="header-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 hidden-xs">
+                                <div class="header-left">
+                                    <div class="social-icons">
+                                        <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                                        <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                                        <a href="#"><i class="zmdi zmdi-dribbble"></i></a>
+                                        <a href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                                        <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <p class="shippingtop">التوصيل مجاني إلى باب دارك</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom sticky-header">
+                    <div class="container">
+                        <div class="mgea-full-width">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="logo text-center">
+                                        <a href="index.html"><img src="images/logo/logo.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header section end-->
+            <!--header section end-->
+            <!--slider section start-->
+            <div class="slider-container">
+                <!-- Slider Image -->
+                <div id="mainSlider" class="nivoSlider slider-image">
+                    <img src="images/slider/1.jpg" alt="" title="#htmlcaption1" />
+                    <img src="images/slider/2.jpg" alt="" title="#htmlcaption2" />
+                    <img src="images/slider/3.jpg" alt="" title="#htmlcaption3" />
+                </div>
+                <!-- Slider Caption 1 -->
+                <div id="htmlcaption1" class="nivo-html-caption slider-caption-1">
+                    <div class="slider-text-table">
+                        <div class="slider-text-tablecell">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="slide1-text">
+                                            <div class="middle-text">
+                                                <div class="title-1 wow rotateInDownRight" data-wow-duration="0.9s" data-wow-delay="0s">
+                                                    <h1>Ion electric deep moisturizing mask</h1>
+                                                </div>
+                                                <div class="desc wow slideInRight" data-wow-duration="1.2s" data-wow-delay="0.2s">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu condimentum<br> massa.lorem ipsum dolor sit amet,consectetur adipicing elit.</p>
+                                                </div>
+                                                <div class="explore-now wow bounceInUp" data-wow-duration="1.3s" data-wow-delay=".5s">
+                                                    <a href="#">Explore now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="htmlcaption2" class="nivo-html-caption slider-caption-1">
+                    <div class="slider-text-table">
+                        <div class="slider-text-tablecell">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="slide1-text">
+                                            <div class="middle-text">
+                                                <div class="title-1 wow rotateInDownRight" data-wow-duration="0.9s" data-wow-delay="0s">
+                                                    <h1>welcome our beauty house</h1>
+                                                </div>
+                                                <div class="desc wow slideInRight" data-wow-duration="1.2s" data-wow-delay="0.2s">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu condimentum<br> massa.lorem ipsum dolor sit amet,consectetur adipicing elit.</p>
+                                                </div>
+                                                <div class="explore-now wow bounceInUp" data-wow-duration="1.3s" data-wow-delay=".5s">
+                                                    <a href="#">Explore now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="htmlcaption3" class="nivo-html-caption slider-caption-1">
+                    <div class="slider-text-table">
+                        <div class="slider-text-tablecell">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="slide1-text">
+                                            <div class="middle-text">
+                                                <div class="title-1 wow rotateInDownRight" data-wow-duration="0.9s" data-wow-delay="0s">
+                                                    <h1>welcome our beauty house</h1>
+                                                </div>
+                                                <div class="desc wow slideInRight" data-wow-duration="1.2s" data-wow-delay="0.2s">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu condimentum<br> massa.lorem ipsum dolor sit amet,consectetur adipicing elit.</p>
+                                                </div>
+                                                <div class="explore-now wow bounceInUp" data-wow-duration="1.3s" data-wow-delay=".5s">
+                                                    <a href="#">Explore now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--slider section end-->
+            <!--welcome section start-->
+            <div class="welcome-about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="about-img">
+                                <img src="images/about/1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="about-desc">
+                                <h6>مرحبا بكم في موقع DW WELL</h6>
+                                <h2>معلومات عن الماسك </h2>
+                                <p class="text-1">قطب نفاذية اتجاه الطب الصيني التقليدي هو منتج الجهاز الطبي الذي تمت الموافقة عليه من قبل مؤسسة الصين الدولية لاختبار الاعتراف المتبادل ، وشهادة السلامة CE ، وشهادة SGS ، وتعقيم التشعيع الكامل. عند الاستخدام ، سيحتوي جهاز
+                                    الزناد الصغير على وميض إلكتروستاتيكي في اللحظة التي يتم تشغيله فيها. لكنه آمن تمامًا للاستخدام ، فجهد الأمان لجسم الإنسان هو 36 فولت ، والجهد الأقصى الناتج عن جهاز الزناد الصغير هو 1.5 فولت ، والتيار الناتج عن هذا الجهد
+                                    هو تيار مستوى الميكرومبير الذي يعمل محليًا على جسم الإنسان. تحت تأثير المجال الكهربائي الاتجاهي الذي شكله الإيجار الصغير ، يكون تأثير امتصاص الجوهر أكثر من ألف مرة من قناع الوجه التقليدي. لذلك يمكن تطبيق "قناع الوجه"
+                                    هذا لمدة يومين أو ثلاثة أيام في المرة الواحدة. العلاج الفيزيائي الكهربي الدقيق mas-sage والوخز بالإبر السائل يمكن أن يقلص المسام ويشد الجلد ؛ يدمر البيوفيلم البكتيري الذي يتشكل على جروح الجلد ، ويعالج بفعالية الالتهابات
+                                    الجلدية البكتيرية المقاومة للأدوية.</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--welcome section end-->
+            <!--fun fact area-->
+            <div class="fun-fact text-center ptb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="single-fun-fact float-left">
+                                <div class="fun-icon">
+                                    <a href="#"><i class="fa fa-pagelines" aria-hidden="true"></i></a>
+                                </div>
+                                <h5>يتكون من مواد طبيعية</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="single-fun-fact middle-margin-left">
+                                <div class="fun-icon">
+                                    <a href="#"><i class="zmdi zmdi-male-female"></i></a>
+                                </div>
+                                <h5>يناسب جميع انواع البشرة</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="single-fun-fact middle-margin">
+                                <div class="fun-icon">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                </div>
+                                <h5>100% جودة عالية</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="single-fun-fact">
+                                <div class="fun-icon">
+                                    <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                </div>
+                                <h5>يرطب ويغذي البشرة</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--fun fact area end-->
+            <!--Our feature section-->
+            <div class="choose-us ptb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="section-title bg_grey text-center">
+                                <h2>مميزات الماسك</h2>
+                                <p> قناع الترطيب العميق ايون الكهربائي مصنوع من ايوسل طبيعي يسمى "الجلد الثاني". زيادة محتوى إيوسل بشكل أكثر إبداعًا بنسبة 25٪ ، مما يجعل قماش الغشاء الخاص بنا يتمتع بثلاث مزايا مهمة</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 col-sm-6">
+                            <div class="choose-us-img">
+                                <img src="images/why.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-6">
+                            <div class="choose-us-list">
+                                <div class="single-choose">
+                                    <div class="choose-head">
+                                        <div class="choose-icon">
+                                            <i class="zmdi zmdi-favorite"></i>
+                                        </div>
+                                        <div class="choose-title">
+                                            <h5>سهل الاستخدام</h5>
+                                        </div>
+                                    </div>
+                                    <div class="choose-desc">
+                                        <p>لا يتطلب أي معدات معالجة. من السهل تشغيله في المنزل ، مثل وضع قناع الوجه والجص ، إلا أنه لا يغير عادة استخدام قناع الوجه والجص الأصلي. إنه ملائم لإدارة وانقطاع الدواء بسبب الاستخدام الخارجي للجلد ، والعملية مرنة
+                                            ومريحة للغاية. </p>
+                                    </div>
+                                </div>
+                                <div class="single-choose">
+                                    <div class="choose-head">
+                                        <div class="choose-icon">
+                                            <i class="fa fa-pagelines" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="choose-title">
+                                            <h5>آمن وفعال ولا آثار جانبية</h5>
+                                        </div>
+                                    </div>
+                                    <div class="choose-desc">
+                                        <p> 1. نظرًا لأن موقع التطبيق على سطح الجسم ، فإنه يتغلب على تأثير العوامل المعقدة مثل تدمير درجة الحموضة للمخاط الهضمي ووقت العملية ، وبالتالي تحسين معدل الاستخدام الفعال للأدوية وتحسين معدل امتصاص الدواء بشكل ملحوظ.
+                                            <br> 2. يحد من تأثير المرور الأول للكبد وتحلل الأدوية في الجهاز الهضمي ، ويقلل من الآثار الجانبية للأدوية على الجهاز الهضمي والكبد والكلى وأعضاء أخرى. </p>
+                                    </div>
+                                </div>
+                                <div class="single-choose">
+                                    <div class="choose-head">
+                                        <div class="choose-icon">
+                                            <i class="zmdi zmdi-mood"></i>
+                                        </div>
+                                        <div class="choose-title">
+                                            <h5>تخريب أقنعة الوجه التقليدية</h5>
+                                        </div>
+                                    </div>
+                                    <div class="choose-desc">
+                                        <p>1. يمكن أن تفعله لا يمكن أن تفعل قناع الوجه الأخرى ، ثم المغذيات ، والمياه المرسلة بدقة إلى طبقة الأدمة تحت البشرة. <br> 2. بسبب تأثير تيار دائرة أيون الفضة ، يمكنه امتصاص صبغة الوجه (الميلانين) والسموم (الرصاص
+                                            وبقايا الزئبق الناتجة عن استخدام مستحضرات التجميل الأخرى) من الجلد ، وذلك لتحقيق وظائف تنظيف البشرة - الترطيب العميق والتغذية ، مما يجعلك أصغر من 5-7 سنوات من الداخل إلى الخارج. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Our feature section end-->
+            <!--Gallery section start-->
+            <div class="galllery pb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="section-title text-center">
+                                <h2> صور لماسك DW</h2>
+                                <p> قطعة قماش غشائية طبيعية نقية ، أيوسل مستورد أو قطن خالص أو قماش غشاء آخر أفضل</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-tab-section" dir="ltr">
+                    <div class="gallery-tab-content">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="all">
+                                <div class="single-gallery-list owl_pagination">
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/1.jpg" alt="">
+                                            <a href="images/gallery/1.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/2.jpg" alt="">
+                                            <a href="images/gallery/2.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/3.jpg" alt="">
+                                            <a href="images/gallery/3.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/4.jpg" alt="">
+                                            <a href="images/gallery/4.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/5.jpg" alt="">
+                                            <a href="images/gallery/5.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/6.jpg" alt="">
+                                            <a href="images/gallery/6.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/7.jpg" alt="">
+                                            <a href="images/gallery/7.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/8.jpg" alt="">
+                                            <a href="images/gallery/8.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/9.jpg" alt="">
+                                            <a href="images/gallery/9.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/10.jpg" alt="">
+                                            <a href="images/gallery/10.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/11.jpg" alt="">
+                                            <a href="images/gallery/11.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="single-gallery">
+                                        <div class="gallery-img">
+                                            <img src="images/gallery/4.jpg" alt="">
+                                            <a href="images/gallery/4.jpg"><i class="zmdi zmdi-zoom-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Gallery section end-->
+            <!--form start-->
+            <div class="choose-us pb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="section-title bg_grey text-center">
+                                <h2>المقارنة قبل و بعد استعمال الماسك </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-md-4">
+                                <div class="beforeafter">
+                                    <img class="twentytwenty-before" src="images/comapre/old1.jpg">
+                                    <img class="twentytwenty-after" src="images/comapre/new1.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="beforeafter">
+                                    <img class="twentytwenty-before" src="images/comapre/old2.jpg">
+                                    <img class="twentytwenty-after" src="images/comapre/new2.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="beforeafter">
+                                    <img class="twentytwenty-before" src="images/comapre/old3.jpg">
+                                    <img class="twentytwenty-after" src="images/comapre/new3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--form end-->
+            <!--Offer section start-->
+            <div class="special-offer">
+                <div class="bg-img">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="section-title bg_grey text-center">
+                                    <h2>هل تطمحين للحصول على بشرة نظيفة ولامعة</h2>
+                                    <p> إليك الحل ماسك يغذي ويرطب بشرتك</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="offer-apoinment text-center">
+                                    <a href="#" class="button border_radius large button-black mb-20">
+                                        <span>أطلبي الآن</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Offer section end-->
+
+            <!--Our feature section-->
+            <div class="choose-us pb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="section-title bg_grey text-center">
+                                <h2>آراء زبائننا</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="reviews">
+                            <div class="review">
+
+                                <div class="review-data">
+                                    <img class="review-img" src="https://cdn05.zipify.com/EyQiB7kvcRxPMPleMGMdX3OyVWo=/fit-in/700x0/10596bb1cdd744b1bc8ef12869a22746/7.png" alt="">
+                                    <div class="review-rating-holder">
+                                        <div class="review-rating">
+                                            <div class="rating-bar" style="width: 100%"></div>
+                                            <div class="rating-stars"></div>
+                                        </div>
+                                        5/5
+                                    </div>
+                                    <div class="review-text"><span>“</span>Commande bien reçu merci pour le service et la qualité du produit
+                                        <span>”</span></div>
+                                    <div class="review-author">
+                                        <div class="author-icon">M</div>Mohamed
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review-data">
+                                    <img class="review-img" src="https://cdn05.zipify.com/EyQiB7kvcRxPMPleMGMdX3OyVWo=/fit-in/700x0/10596bb1cdd744b1bc8ef12869a22746/7.png" alt="">
+                                    <div class="review-rating-holder">
+                                        <div class="review-rating">
+                                            <div class="rating-bar" style="width: 100%"></div>
+                                            <div class="rating-stars"></div>
+                                        </div>
+                                        5/5
+                                    </div>
+                                    <div class="review-text"><span>“</span>C'est la 3ème fois que j'achète vos produits merci pour la qualité et le service vous êtes les meilleures<span>”</span></div>
+                                    <div class="review-author">
+                                        <div class="author-icon">Y</div>Yassine boukhari
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review-data">
+                                    <img class="review-img" src="https://cdn05.zipify.com/EyQiB7kvcRxPMPleMGMdX3OyVWo=/fit-in/700x0/10596bb1cdd744b1bc8ef12869a22746/7.png" alt="">
+                                    <div class="review-rating-holder">
+                                        <div class="review-rating">
+                                            <div class="rating-bar" style="width: 100%"></div>
+                                            <div class="rating-stars"></div>
+                                        </div>
+                                        5/5
+                                    </div>
+                                    <div class="review-text"><span>“</span>Tout c'est bien passé . Toutes mes commandes sont bien arrivées en temps et en heure. Livraison Très rapide et des produits de qualités<span>”</span>
+                                    </div>
+                                    <div class="review-author">
+                                        <div class="author-icon">A</div>Adam
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review">
+
+                                <div class="review-data">
+                                    <img class="review-img" src="https://cdn05.zipify.com/EyQiB7kvcRxPMPleMGMdX3OyVWo=/fit-in/700x0/10596bb1cdd744b1bc8ef12869a22746/7.png" alt="">
+                                    <div class="review-rating-holder">
+                                        <div class="review-rating">
+                                            <div class="rating-bar" style="width: 100%"></div>
+                                            <div class="rating-stars"></div>
+                                        </div>
+                                        5/5
+                                    </div>
+                                    <div class="review-text"><span>“</span>Satisfaite ! j'ai acheter deux sabots médical une très bonne qualité merci shelby shoes<span>”</span></div>
+                                    <div class="review-author">
+                                        <div class="author-icon">S</div>Said
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review">
+
+                                <div class="review-data">
+                                    <img class="review-img" src="https://cdn05.zipify.com/EyQiB7kvcRxPMPleMGMdX3OyVWo=/fit-in/700x0/10596bb1cdd744b1bc8ef12869a22746/7.png" alt="">
+                                    <div class="review-rating-holder">
+                                        <div class="review-rating">
+                                            <div class="rating-bar" style="width: 100%"></div>
+                                            <div class="rating-stars"></div>
+                                        </div>
+                                        5/5
+                                    </div>
+                                    <div class="review-text"><span>“</span>un site que j'adore!c'est le meilleur site de ventes de sabots médicaux !!<span>”</span></div>
+                                    <div class="review-author">
+                                        <div class="author-icon">B</div>Brahim
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review">
+
+                                <div class="review-data">
+                                    <img class="review-img" src="https://cdn05.zipify.com/EyQiB7kvcRxPMPleMGMdX3OyVWo=/fit-in/700x0/10596bb1cdd744b1bc8ef12869a22746/7.png" alt="">
+                                    <div class="review-rating-holder">
+                                        <div class="review-rating">
+                                            <div class="rating-bar" style="width: 100%"></div>
+                                            <div class="rating-stars"></div>
+                                        </div>
+                                        5/5
+                                    </div>
+                                    <div class="review-text"><span>“</span>Merci pour la rapidité et le service commande reçu le même jour.<span>”</span></div>
+                                    <div class="review-author">
+                                        <div class="author-icon">Y</div>Yassine Bennani
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review-data">
+                                    <img class="review-img" src="https://cdn05.zipify.com/EyQiB7kvcRxPMPleMGMdX3OyVWo=/fit-in/700x0/10596bb1cdd744b1bc8ef12869a22746/7.png" alt="">
+                                    <div class="review-rating-holder">
+                                        <div class="review-rating">
+                                            <div class="rating-bar" style="width: 100%"></div>
+                                            <div class="rating-stars"></div>
+                                        </div>
+                                        5/5
+                                    </div>
+                                    <div class="review-text"><span>“</span>Tout c'est bien passé . Toutes mes commandes sont bien arrivées en temps et en heure. Livraison Très rapide et des produits de qualités<span>”</span>
+                                    </div>
+                                    <div class="review-author">
+                                        <div class="author-icon">A</div>Adam
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review-data">
+                                    <img class="review-img" src="https://cdn05.zipify.com/EyQiB7kvcRxPMPleMGMdX3OyVWo=/fit-in/700x0/10596bb1cdd744b1bc8ef12869a22746/7.png" alt="">
+                                    <div class="review-rating-holder">
+                                        <div class="review-rating">
+                                            <div class="rating-bar" style="width: 100%"></div>
+                                            <div class="rating-stars"></div>
+                                        </div>
+                                        5/5
+                                    </div>
+                                    <div class="review-text"><span>“</span>شكرا شيلبي وصلني صابو ولله مريح جدا تبارك الله عليكم
+                                        <span>”</span></div>
+                                    <div class="review-author">
+                                        <div class="author-icon">S</div>Soulaimane
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Our feature section end-->
+
+            <!--Video section start-->
+            <div class="video-section text-center">
+                <div class="bg-overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="video-section-inner">
+                                <div class="video-icon">
+                                    <a href="https://www.youtube.com/watch?v=E6ZgAyx8kWU"><i class="zmdi zmdi-play"></i></a>
+                                </div>
+                                <h2>طريقة الستعمال الماسك</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Video section end-->
+
+            <!--form start-->
+            <div class="choose-us ptb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="section-title bg_grey text-center">
+                                <h2>بادري بالطلب الآن </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container">
+                            <form id="order-now" class="order" action="#">
+                                <h3 id="productName" class="text-center">قناع ترطيب عميق للوجه من أيون كهربائي</h3>
+                                <div class="form-group">
+                                    <label for="pays">Pays - البلد</label>
+                                    <select class="form-control" name="pays" id="pays">
+                                      <option value="Maroc" selected="">المغرب</option>
+                                      <option value="Hors Maroc">خارج المغرب</option>
+                                   </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nom">Nom Complet</label>
+                                    <input type="text" class="form-control" name="nom" id="nom" placeholder="الاسم الكامل" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tel">Téléphone</label>
+                                    <input type="tel" class="form-control" name="tel" id="tel" placeholder="الهاتف" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ville">Ville</label>
+                                    <input type="text" class="form-control" name="ville" id="ville" placeholder="المدينة" rows="3" required=""> </div>
+                                <div class="form-group">
+                                    <label for="adresse">adresse</label>
+                                    <textarea class="form-control" name="adresse" id="adresse" placeholder="العنوان" rows="3" required=""></textarea>
+                                </div>
+
+                                <div class="col-md-12 text-center form-price pb-2" style="background: #87ed7f; color: #000000; padding-top: 6px; padding-bottom: 1px !important; margin-bottom: 4px;">
+                                    <h2 style="font-size:1rem">الثمن : 250 درهم و التوصيل بالمجان</h2>
+                                </div>
+
+                                <div class="offer-apoinment text-center mt-70">
+                                    <a href="#" class="button border_radius large button-black">
+                                        <span>أطلبي الآن</span>
+                                    </a>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--form end-->
+
+            <!--footer start-->
+            <div class="footer">
+                <div class="footer-top ptb-70">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center pb-20">
+                                <h3>هدفنا هو إِرضائِكم، و سعادتناَ تكمُن في خدمتكم </h3>
+                                <p>تُسترجعُ جميع الاموال في حالة عدم الرضى عن منتوجاتنا </p>
+                                <h5>جميع الحقوق محفوضة 2021</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--footer end-->
+
+        </div>
+    </div>
+
+
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+
+    <!-- All js plugins included in this file. -->
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nivo.slider.pack.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/ajax-mail.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
+    <script>
+        $(window).load(function() {
+            $(".beforeafter").twentytwenty();
+        });
+    </script>
+
+</body>
+
+
+</html>
